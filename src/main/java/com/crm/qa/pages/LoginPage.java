@@ -12,11 +12,11 @@ public class LoginPage extends TestBase {
 	  
 	   
 		//Page Factory - OR:
-		@FindBy(name="Username")
+		@FindBy(xpath="//input[@placeholder='Username']")
 		WebElement Username;
 	    
 		//Page Factory - OR:
-		@FindBy(name="Password")
+		@FindBy(xpath="//input[@placeholder='Password']")
 		WebElement Password;
 
 		@FindBy(xpath="//input[@type='submit']")
@@ -36,6 +36,7 @@ public class LoginPage extends TestBase {
 		}
 		
 		public String validateLoginPageTitle() {
+			System.out.println(driver.getTitle());
 			return driver.getTitle();
 		}
 		
